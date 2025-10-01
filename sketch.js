@@ -22,7 +22,7 @@ function setup() {
 }
 
 function draw() {
-  background(10, 10, 10);
+  background(0, 0, 240);
 
   let scaleX = width / ege.width;
   let scaleY = height / ege.height;
