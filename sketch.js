@@ -1,7 +1,9 @@
 let ege;
+let sound;
 
 function preload() {
   ege = loadImage('ege.gif'); 
+  sound = loadSound('song.mp3');
 }
 
 
@@ -17,7 +19,8 @@ function setup() {
 
   createCanvas(canvasWidth, canvasHeight);
 
-  //console.log(ege);
+  enableSoundTap('Tap to Enable Sound');
+
   background(50);
 }
 
@@ -35,4 +38,10 @@ function draw() {
   let y = (height - scaledHeight) / 2;
 
   image(ege, x, y, scaledWidth, scaledHeight);
+
+  if (window.soundEnabled){
+    text('Tap anywhere to play sound', 20, 20);
+  } else {
+    text('Waiting for sound activation...', 20, 20);
+  }
 }
