@@ -19,7 +19,7 @@ function setup() {
 
   createCanvas(canvasWidth, canvasHeight);
 
-  enableSoundTap('Tap to Enable Sound');
+  enableSoundTap('Tap to enjoy some music');
 
   background(50);
 }
@@ -38,10 +38,10 @@ function draw() {
   let y = (height - scaledHeight) / 2;
 
   image(ege, x, y, scaledWidth, scaledHeight);
+}
 
-  if (window.soundEnabled){
-    text('Tap anywhere to play sound', 20, 20);
-  } else {
-    text('Waiting for sound activation...', 20, 20);
+function mousePressed() {
+  if (window.soundEnabled && !sound.isPlaying()) {
+    sound.play();
   }
 }
