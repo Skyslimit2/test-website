@@ -2,7 +2,7 @@ let ege;
 let sound;
 
 function preload() {
-  ege = loadImage('ege.gif'); 
+  ege = loadImage('boombox.gif'); 
   sound = loadSound('song.mp3');
 }
 
